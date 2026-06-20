@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codes — Urielle GOUNOU ZIME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+  <div class="inner">
+    <a href="index.html" class="logo">Urielle GOUNOU ZIME</a>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="papers.html">Papers</a></li>
+      <li><a href="codes.html" class="active">Codes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-header">
+    <p class="eyebrow">Code library</p>
+    <h1>Stata · R · Python</h1>
+    <p class="lead">
+      A personal reference library of scripts collected throughout my licence, master, and PhD.
+      Scripts cover data cleaning, causal inference, visualisation, and spatial analysis.
+    </p>
+  </div>
+
+  <div class="code-tabs">
+    <button class="code-tab active" onclick="switchTab(event,'stata')">Stata</button>
+    <button class="code-tab" onclick="switchTab(event,'r')">R</button>
+    <button class="code-tab" onclick="switchTab(event,'python')">Python</button>
+  </div>
+
+  <!-- STATA -->
+  <div class="code-panel active" id="panel-stata">
+    <div class="upload-hint">
+      <div class="hint-icon">📁</div>
+      <p>Upload your <strong>.do files</strong> to the <code>codes/stata/</code> folder in your GitHub repo. They will appear here automatically once you update this page.</p>
+    </div>
+    <div class="file-list">
+      <div class="file-placeholder">No scripts uploaded yet — coming soon</div>
+    </div>
+  </div>
+
+  <!-- R -->
+  <div class="code-panel" id="panel-r">
+    <div class="upload-hint">
+      <div class="hint-icon">📁</div>
+      <p>Upload your <strong>.R files</strong> to the <code>codes/r/</code> folder in your GitHub repo. They will appear here automatically once you update this page.</p>
+    </div>
+    <div class="file-list">
+      <div class="file-placeholder">No scripts uploaded yet — coming soon</div>
+    </div>
+  </div>
+
+  <!-- PYTHON -->
+  <div class="code-panel" id="panel-python">
+    <div class="upload-hint">
+      <div class="hint-icon">📁</div>
+      <p>Upload your <strong>.py files</strong> to the <code>codes/python/</code> folder in your GitHub repo. They will appear here automatically once you update this page.</p>
+    </div>
+    <div class="file-list">
+      <div class="file-placeholder">No scripts uploaded yet — coming soon</div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Urielle GOUNOU ZIME — PhD Candidate, University of Pittsburgh</span>
+    <span>Updated June 2025</span>
+  </footer>
+</div>
+
+<script>
+  function switchTab(e, lang) {
+    document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.code-panel').forEach(p => p.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    document.getElementById('panel-' + lang).classList.add('active');
+  }
+</script>
+</body>
+</html>
