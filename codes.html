@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <meta name="google" content="notranslate" />
 </head>
 <body>
 <nav>
@@ -27,48 +28,38 @@
     <p class="eyebrow">Code library</p>
     <h1>Stata · R · Python</h1>
     <p class="lead">
-      A personal reference library of scripts collected throughout my licence, master, and PhD.
-      Scripts cover data cleaning, causal inference, visualisation, and spatial analysis.
+      A personal library of scripts developed throughout my licence, master, and PhD —
+      covering data cleaning, causal inference, spatial analysis, and visualisation.
+      Scripts are available upon request.
     </p>
   </div>
 
-  <div class="code-tabs">
-    <button class="code-tab active" onclick="switchTab(event,'stata')">Stata</button>
-    <button class="code-tab" onclick="switchTab(event,'r')">R</button>
-    <button class="code-tab" onclick="switchTab(event,'python')">Python</button>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.1rem; margin-bottom: 3rem;">
+
+    <div class="interest-card">
+      <p class="label">Stata</p>
+      <p>Synthetic control, IV/2SLS, DiD, RDD, data cleaning, panel construction, DHS datasets.</p>
+    </div>
+
+    <div class="interest-card">
+      <p class="label">R</p>
+      <p>Spatial mapping, publication-ready figures, summary tables, heterogeneity-robust DiD.</p>
+    </div>
+
+    <div class="interest-card">
+      <p class="label">Python</p>
+      <p>Data wrangling, exploratory analysis, machine learning pipelines, Kalman smoother.</p>
+    </div>
+
   </div>
 
-  <!-- STATA -->
-  <div class="code-panel active" id="panel-stata">
-    <div class="upload-hint">
-      <div class="hint-icon">📁</div>
-      <p>Upload your <strong>.do files</strong> to the <code>codes/stata/</code> folder in your GitHub repo. They will appear here automatically once you update this page.</p>
-    </div>
-    <div class="file-list">
-      <div class="file-placeholder">No scripts uploaded yet — coming soon</div>
-    </div>
-  </div>
-
-  <!-- R -->
-  <div class="code-panel" id="panel-r">
-    <div class="upload-hint">
-      <div class="hint-icon">📁</div>
-      <p>Upload your <strong>.R files</strong> to the <code>codes/r/</code> folder in your GitHub repo. They will appear here automatically once you update this page.</p>
-    </div>
-    <div class="file-list">
-      <div class="file-placeholder">No scripts uploaded yet — coming soon</div>
-    </div>
-  </div>
-
-  <!-- PYTHON -->
-  <div class="code-panel" id="panel-python">
-    <div class="upload-hint">
-      <div class="hint-icon">📁</div>
-      <p>Upload your <strong>.py files</strong> to the <code>codes/python/</code> folder in your GitHub repo. They will appear here automatically once you update this page.</p>
-    </div>
-    <div class="file-list">
-      <div class="file-placeholder">No scripts uploaded yet — coming soon</div>
-    </div>
+  <div style="background: white; border: 0.5px solid var(--border); border-radius: 6px; padding: 2rem 2.2rem; max-width: 520px;">
+    <p style="font-family: var(--serif); font-size: 1.1rem; margin-bottom: 0.6rem;">Scripts available upon request</p>
+    <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem;">
+      If you are interested in reviewing my code as part of a recruitment or collaboration process,
+      please get in touch by email and I will provide access to the relevant scripts.
+    </p>
+    <a href="mailto:you@pitt.edu" style="font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--blue); border-bottom: 1px solid var(--blue); padding-bottom: 1px;">you@pitt.edu</a>
   </div>
 
   <footer>
@@ -76,14 +67,5 @@
     <span>Updated June 2025</span>
   </footer>
 </div>
-
-<script>
-  function switchTab(e, lang) {
-    document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.code-panel').forEach(p => p.classList.remove('active'));
-    e.currentTarget.classList.add('active');
-    document.getElementById('panel-' + lang).classList.add('active');
-  }
-</script>
 </body>
 </html>
